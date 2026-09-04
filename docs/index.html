@@ -4,41 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C.A.R.S.S. Robotics | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="../assets/carsstramsparent.png" alt="C.A.R.S.S. Logo" class="logo">
+
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">
+            <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/carsstramsparent.png" alt="C.A.R.S.S. Logo" class="nav-logo-img">
+        </a>
+        <div class="nav-links">
+            <a href="index.html" style="color: var(--text);">Home</a>
+            <a href="team.html">Meet the Team</a>
+            <a href="awards.html">Awards</a>
+            <a href="sponsors.html" class="nav-cta">Potential Sponsors</a>
         </div>
-        <nav class="tab-container">
-            <a href="index.html" class="tab-btn active">Home</a>
-            <a href="team.html" class="tab-btn">Meet the Team</a>
-            <a href="awards.html" class="tab-btn">Awards</a>
-            <a href="sponsors.html" class="tab-btn">Potential Sponsors</a>
-        </nav>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content">
+            <p class="hero-tag">Engineering · Innovation · Competition</p>
+            <h1 class="hero-title">C.A.R.S.S. <span class="hero-title-accent">ROBOTICS</span></h1>
+            <p class="hero-sub">
+                Building tomorrow's engineers through real-world hardware design, autonomous software, and high-intensity arenas.
+            </p>
+            <div class="hero-actions">
+                <a href="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/SponsorLetter.pdf" target="_blank" class="btn btn-primary">Read Sponsorship Letter</a>
+                <a href="team.html" class="btn btn-ghost">Meet the Crew</a>
+            </div>
+        </div>
+        <div class="hero-status">
+            <span class="status-dot"></span>
+            <span>Active Competition Season 2026</span>
+        </div>
     </header>
 
-    <main class="content-container">
-        <section class="info-card fade-in delay-1">
-            <h2 class="green-accent">Welcome to C.A.R.S.S. Robotics</h2>
-            <p>We are a dedicated student robotics program competing at the highest levels of engineering, design, and strategic combat. Our team operates like a small business, managing everything from hardware construction to marketing and outreach.</p>
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="../assets/SponsorLetter.pdf" target="_blank" class="sponsor-btn">Read Our Sponsorship Letter</a>
-            </div>
-        </section>
+    <section class="section">
+        <div class="container">
+            <span class="section-label">Divisions</span>
+            <h2 class="section-title">What We Do</h2>
+            <p class="section-sub">From arena combat to suborbital rocketry, our students design, test, and compete across multiple STEM disciplines.</p>
 
-        <section class="info-card fade-in delay-2">
-            <h2 class="green-accent">What We Do</h2>
-            <h3>BEST Robotics</h3>
-            <p>BEST (Boosting Engineering, Science, and Technology) challenges students to conceptualize, design, and build a remote-controlled robot from scratch to compete in local and regional hubs.</p>
-            
-            <h3 style="margin-top: 1rem;">Battle Bots</h3>
-            <p>Precision engineering meets arena combat. We design, wire, and armor lightweight combat robots, focusing on robust structural integrity and offensive capabilities.</p>
-            
-            <h3 style="margin-top: 1rem;">Rocketry</h3>
-            <p>Reaching for the skies through aerospace engineering. Our team designs, builds, and launches custom model rockets, focusing on aerodynamics, payload capacity, and safe recovery systems.</p>
-        </section>
-    </main>
+            <div class="projects-grid">
+                <div class="project-card project-featured">
+                    <span class="project-tag">Flagship Program</span>
+                    <h3 class="project-name">BEST Robotics</h3>
+                    <p class="project-desc">Boosting Engineering, Science, and Technology. Students design and build remote-controlled robots within strict resource limits while producing formal engineering notebooks, exhibits, and marketing presentations.</p>
+                </div>
+
+                <div class="project-card">
+                    <span class="project-tag">Combat Engineering</span>
+                    <h3 class="project-name">Battle Bots</h3>
+                    <p class="project-desc">Precision engineering meets arena combat. We build, wire, armor, and pilot custom combat bots focused on destructive power and structural survivability.</p>
+                </div>
+
+                <div class="project-card">
+                    <span class="project-tag">Aerospace</span>
+                    <h3 class="project-name">Rocketry</h3>
+                    <p class="project-desc">Hands-on aerospace engineering. Teams fabricate custom model rockets, calculate motor impulse dynamics, and deploy dual-recovery parachute systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 C.A.R.S.S. Robotics. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
