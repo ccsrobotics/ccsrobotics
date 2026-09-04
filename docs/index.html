@@ -8,6 +8,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Custom Gallery Styles -->
+    <style>
+        .gallery-viewer {
+            position: relative;
+            max-width: 900px;
+            height: 500px;
+            margin: 0 auto 4rem;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            background: var(--bg-3);
+        }
+        .gallery-slide {
+            position: absolute;
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.2s ease-in-out;
+            object-fit: cover;
+        }
+        .gallery-slide.active {
+            opacity: 1;
+        }
+        @media (max-width: 768px) {
+            .gallery-viewer {
+                height: 250px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -51,7 +84,34 @@
         </div>
     </header>
 
-    <section class="section">
+    <!-- New Auto-Rotating Gallery Section -->
+    <section class="section" style="padding-top: 2rem;">
+        <div class="container">
+            <span class="section-label" style="text-align: center;">In Action</span>
+            <h2 class="section-title" style="text-align: center;">Team Gallery</h2>
+            
+            <div class="gallery-viewer">
+                <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/gallery/Screenshot%202026-09-04%20132247.png" class="gallery-slide active" alt="Gallery Image">
+                <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/gallery/Screenshot%202026-09-04%20132259.png" class="gallery-slide" alt="Gallery Image">
+                <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/gallery/Screenshot%202026-09-04%20132324.png" class="gallery-slide" alt="Gallery Image">
+                <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/gallery/Screenshot%202026-09-04%20132559.png" class="gallery-slide" alt="Gallery Image">
+                <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/gallery/Screenshot%202026-09-04%20132606.png" class="gallery-slide" alt="Gallery Image">
+                <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/gallery/Screenshot%202026-09-04%20132620.png" class="gallery-slide" alt="Gallery Image">
+                <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/gallery/Screenshot%202026-09-04%20132637.png" class="gallery-slide" alt="Gallery Image">
+                <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/gallery/Screenshot%202026-09-04%20132824.png" class="gallery-slide" alt="Gallery Image">
+                <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/gallery/Screenshot%202026-09-04%20132834.png" class="gallery-slide" alt="Gallery Image">
+                <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/gallery/Screenshot%202026-09-04%20132847.png" class="gallery-slide" alt="Gallery Image">
+                <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/gallery/Screenshot%202026-09-04%20132901.png" class="gallery-slide" alt="Gallery Image">
+                <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/gallery/Screenshot%202026-09-04%20132923.png" class="gallery-slide" alt="Gallery Image">
+                <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/gallery/Screenshot%202026-09-04%20133008.png" class="gallery-slide" alt="Gallery Image">
+                <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/gallery/Screenshot%202026-09-04%20133015.png" class="gallery-slide" alt="Gallery Image">
+                <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/gallery/Screenshot%202026-09-04%20133031.png" class="gallery-slide" alt="Gallery Image">
+                <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/gallery/Screenshot%202026-09-04%20133042.png" class="gallery-slide" alt="Gallery Image">
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top: 2rem;">
         <div class="container">
             <span class="section-label">Divisions</span>
             <h2 class="section-title">What We Do</h2>
@@ -83,6 +143,22 @@
         <p>© 2026 C.A.R.S.S. Robotics. All rights reserved.</p>
     </footer>
 
+    <!-- Auto-Rotate Gallery Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.gallery-slide');
+            let currentSlide = 0;
+            
+            if (slides.length > 0) {
+                setInterval(() => {
+                    slides[currentSlide].classList.remove('active');
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    slides[currentSlide].classList.add('active');
+                }, 3500); // Transitions to the next image every 3.5 seconds
+            }
+        });
+    </script>
+    
     <script src="script.js"></script>
 </body>
 </html>
