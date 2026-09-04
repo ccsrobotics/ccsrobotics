@@ -3,75 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C.A.R.S.S. Robotics | Meet the Team</title>
+    <title>C.A.R.S.S. Robotics | Team</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .member-card {
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform var(--transition), border-color var(--transition);
+        }
+        .member-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+        .member-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--border-light);
+            margin: 0 auto 1.2rem;
+            display: block;
+        }
+        .member-name {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+        .member-role {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="../assets/carsstramsparent.png" alt="C.A.R.S.S. Logo" class="logo">
-        </div>
-        <nav class="tab-container">
-            <a href="index.html" class="tab-btn">Home</a>
-            <a href="team.html" class="tab-btn active">Meet the Team</a>
-            <a href="awards.html" class="tab-btn">Awards</a>
-            <a href="sponsors.html" class="tab-btn">Potential Sponsors</a>
-        </nav>
-    </header>
 
-    <main class="content-container">
-        <div class="section-header fade-in">
-            <h2 class="green-accent">Our Team</h2>
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">
+            <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/carsstramsparent.png" alt="C.A.R.S.S. Logo" class="nav-logo-img">
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="team.html" style="color: var(--text);">Meet the Team</a>
+            <a href="awards.html">Awards</a>
+            <a href="sponsors.html" class="nav-cta">Potential Sponsors</a>
         </div>
-        
-        <div class="team-tier">
-            <div class="team-member fade-in delay-1">
-                <img src="../assets/teampics/Megan.jpg" alt="Megan">
-                <h3>Megan</h3>
-                <p class="title green-accent">CEO</p>
-            </div>
-            <div class="team-member fade-in delay-2">
-                <img src="../assets/teampics/Rylie.PNG" alt="Rylie">
-                <h3>Rylie</h3>
-                <p class="title green-accent">Marketing Manager</p>
-            </div>
-        </div>
+    </nav>
 
-        <div class="team-tier">
-            <div class="team-member fade-in delay-3">
-                <img src="../assets/teampics/Kylie.jpg" alt="Kylie">
-                <h3>Kylie</h3>
-                <p class="title green-accent">Lead Engineer</p>
-            </div>
-            <div class="team-member fade-in delay-4">
-                <img src="../assets/teampics/Nolan.jpg" alt="Nolan">
-                <h3>Nolan</h3>
-                <p class="title">Software Lead</p>
-            </div>
-        </div>
+    <section class="section" style="padding-top: 9rem;">
+        <div class="container">
+            <span class="section-label">Personnel</span>
+            <h2 class="section-title">Meet the Team</h2>
+            <p class="section-sub">The minds behind the machines, strategy, and operations.</p>
 
-        <div class="team-tier members-grid">
-            <div class="team-member fade-in delay-5">
-                <img src="../assets/teampics/Asher.jpg" alt="Asher">
-                <h3>Asher</h3>
-                <p class="title">Team Member</p>
+            <span class="section-label" style="margin-top: 2rem;">Executive Leadership</span>
+            <div class="team-grid">
+                <div class="member-card">
+                    <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/teampics/Megan.jpg" class="member-avatar" alt="Megan">
+                    <h3 class="member-name">Megan</h3>
+                    <p class="member-role">CEO</p>
+                </div>
+                <div class="member-card">
+                    <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/teampics/Rylie.PNG" class="member-avatar" alt="Rylie">
+                    <h3 class="member-name">Rylie</h3>
+                    <p class="member-role">Marketing Manager</p>
+                </div>
             </div>
-            <div class="team-member fade-in delay-6">
-                <img src="../assets/teampics/Caroline.jpg" alt="Caroline">
-                <h3>Caroline</h3>
-                <p class="title">Team Member</p>
+
+            <span class="section-label" style="margin-top: 3rem;">Engineering Leadership</span>
+            <div class="team-grid">
+                <div class="member-card">
+                    <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/teampics/Kylie.jpg" class="member-avatar" alt="Kylie">
+                    <h3 class="member-name">Kylie</h3>
+                    <p class="member-role">Lead Engineer</p>
+                </div>
+                <div class="member-card">
+                    <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/teampics/Nolan.jpg" class="member-avatar" alt="Nolan">
+                    <h3 class="member-name">Nolan</h3>
+                    <p class="member-role">Software Lead</p>
+                </div>
             </div>
-            <div class="team-member fade-in delay-7">
-                <img src="../assets/teampics/Gracie.jpg" alt="Gracie">
-                <h3>Gracie</h3>
-                <p class="title">Team Member</p>
-            </div>
-            <div class="team-member fade-in delay-8">
-                <img src="../assets/teampics/Heaven.jpg" alt="Heaven">
-                <h3>Heaven</h3>
-                <p class="title">Team Member</p>
+
+            <span class="section-label" style="margin-top: 3rem;">Team Members</span>
+            <div class="team-grid">
+                <div class="member-card">
+                    <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/teampics/Asher.jpg" class="member-avatar" alt="Asher">
+                    <h3 class="member-name">Asher</h3>
+                    <p class="member-role">Team Member</p>
+                </div>
+                <div class="member-card">
+                    <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/teampics/Caroline.jpg" class="member-avatar" alt="Caroline">
+                    <h3 class="member-name">Caroline</h3>
+                    <p class="member-role">Team Member</p>
+                </div>
+                <div class="member-card">
+                    <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/teampics/Gracie.jpg" class="member-avatar" alt="Gracie">
+                    <h3 class="member-name">Gracie</h3>
+                    <p class="member-role">Team Member</p>
+                </div>
+                <div class="member-card">
+                    <img src="https://raw.githubusercontent.com/ccsrobotics/ccsrobotics/main/assets/teampics/Heaven.jpg" class="member-avatar" alt="Heaven">
+                    <h3 class="member-name">Heaven</h3>
+                    <p class="member-role">Team Member</p>
+                </div>
             </div>
         </div>
-    </main>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 C.A.R.S.S. Robotics. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
